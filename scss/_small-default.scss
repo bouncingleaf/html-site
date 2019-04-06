@@ -1,0 +1,128 @@
+html {
+  /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  /* apply a natural box layout model to all elements */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header, nav, main, footer {
+  font-family: $default-fonts;
+  font-weight: $normal-weight;
+}
+
+// ------------------------------------------------------------------------- //
+// Styles for the header
+// ------------------------------------------------------------------------- //
+
+header {
+  padding: 0.5rem $gutter;
+  background-color: $color1;
+  color: $color4;
+  h1 {
+    margin: 0.5rem 0;
+    font-size: $biggest-text;
+    font-weight: $normal-weight;
+  }
+  h2 {
+    margin: 0.5rem 0;
+    font-size: $second-biggest;
+    font-weight: $normal-weight;
+  }
+}
+
+// ------------------------------------------------------------------------- //
+// Styles for the navigation
+// ------------------------------------------------------------------------- //
+
+nav {
+  background-color: $color2;
+  ul {
+    list-style-type: none;
+    font-size: $third-biggest;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    float: left;
+    width: 33.33%;
+    border-right: 1px solid rgba(0,0,0,0.4);
+
+    a {
+      color: $color4;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 0.5rem 0;
+      font-weight: $bold-weight;
+      transition: background 0.75s ease, color 0.75s ease;
+    }
+    a.selected {
+      background-color: $color1;
+    }
+    a:hover {
+      background-color: $color3;
+    }
+  }
+  ul li:last-child {
+    border-right: none;
+  }
+}
+
+// ------------------------------------------------------------------------- //
+// Styles for main
+// ------------------------------------------------------------------------- //
+
+main {
+  padding: 0 $gutter;
+  h2 {
+    font-size: $biggest-text;
+    color: $color2;
+  }
+  h3 {
+    font-size: $second-biggest;
+    color: $color2;
+  }
+  li {
+    font-size: $third-biggest;
+    
+  }
+  .work h4,
+  .education h4 {
+    margin: 1rem 0 0.2rem 0;
+    padding: 0;
+  }
+  .work p,
+  .education p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// ------------------------------------------------------------------------- //
+// Styles for the footer
+// ------------------------------------------------------------------------- //
+
+footer {
+  background-color: $color1;
+  color: $color4;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  padding: 1rem $gutter;
+  width: 100%;
+}
+
+// ------------------------------------------------------------------------- //
+// Other styles
+// ------------------------------------------------------------------------- //
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
